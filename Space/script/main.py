@@ -4,19 +4,19 @@ import sys ,os ,time
 pygame.init()
 largura,altura =1200,650
 tela = pygame.display.set_mode((largura,altura))
-fundo = pygame.image.load(os.path.join("assets","img","espaco.png")).convert_alpha()
+fundo = pygame.image.load(os.path.join("Space","assets","img","espaco.png")).convert_alpha()
 
-nave = pygame.image.load(os.path.join("assets","img","ship.png")).convert_alpha()
+nave = pygame.image.load(os.path.join("Space","assets","img","ship.png")).convert_alpha()
 nave = pygame.transform.scale(nave, (40,40))
 naveRec = nave.get_rect(center=(500, 500))
 bgr1 = fundo.get_rect(center = ((largura//2,(altura//2))))
 
-meteoro = pygame.image.load(os.path.join("assets","img","meteor.png")).convert_alpha()
-laser= pygame.image.load(os.path.join("assets","img","laser.png")).convert_alpha()
+meteoro = pygame.image.load(os.path.join("Space","assets","img","meteor.png")).convert_alpha()
+laser= pygame.image.load(os.path.join("Space","assets","img","laser.png")).convert_alpha()
 
 pygame.display.set_caption("N A S A")
 
-font = pygame.font.Font(os.path.join("assets","Font","sigmar", "Sigmar-Regular.ttf"),16)
+font = pygame.font.Font(os.path.join("Space","assets","Font","sigmar", "Sigmar-Regular.ttf"),16)
 texto = font.render('S T A R - GAME', True,(65,105, 225))
 recText = texto.get_rect(center=(100,10))
 
